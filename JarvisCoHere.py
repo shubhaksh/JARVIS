@@ -145,7 +145,7 @@ conversation_history = ""
 def get_cohere_response(query):
     try:
         global conversation_history
-        conversation_history += f"Shubhaksh: {query}\n Jarvis: "
+        conversation_history += f"User: {query}\n Jarvis: "
         response = co.generate(
             model='command-r-plus',
             prompt=conversation_history,
@@ -200,7 +200,7 @@ def command_mode():
 
     elif 'classroom' in query:
         speak("Opening Sir")
-        webbrowser.open("https://classroom.google.com/u/0/c/NTE4NDIwMDE2NjMy")
+        webbrowser.open("https://classroom.google.com/")
 
     elif 'chat gpt' in query:
         speak("Opening Sir")

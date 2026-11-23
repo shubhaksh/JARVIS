@@ -145,7 +145,7 @@ conversation_history = ""
 def get_openai_response(query):
     try:
         global conversation_history
-        conversation_history += f"Shubhaksh: {query}\n Jarvis: "
+        conversation_history += f"User: {query}\n Jarvis: "
         response = openai.Completion.create(
             engine="gpt-3.5-turbo",
             prompt=conversation_history,
@@ -200,7 +200,7 @@ def command_mode():
 
     elif 'classroom' in query:
         speak("Opening Sir")
-        webbrowser.open("https://classroom.google.com/u/0/c/NTE4NDIwMDE2NjMy")
+        webbrowser.open("https://classroom.google.com/")
 
     elif 'chat gpt' in query:
         speak("Opening Sir")
@@ -208,7 +208,7 @@ def command_mode():
     
     elif 'github' in query:
         speak("Opening Sir")
-        webbrowser.open("https://github.com/shubhaksh")
+        webbrowser.open("https://github.com")
 
     elif 'gmail' in query:
         speak("Opening Sir")

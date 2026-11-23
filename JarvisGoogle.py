@@ -145,7 +145,7 @@ conversation_history = ""
 def get_google_response(query):
     try:
         global conversation_history
-        conversation_history += f"Shubhaksh: {query}\nJarvis: "
+        conversation_history += f"User: {query}\nJarvis: "
         
         model = genai.GenerativeModel('gemini-pro')
         response = model.generate_content(conversation_history)
@@ -198,7 +198,7 @@ def command_mode():
 
     elif 'classroom' in query:
         speak("Opening Sir")
-        webbrowser.open("https://classroom.google.com/u/0/c/NTE4NDIwMDE2NjMy")
+        webbrowser.open("https://classroom.google.com/")
 
     elif 'chat gpt' in query:
         speak("Opening Sir")
@@ -206,7 +206,7 @@ def command_mode():
     
     elif 'github' in query:
         speak("Opening Sir")
-        webbrowser.open("https://github.com/shubhaksh")
+        webbrowser.open("https://github.com")
     
     elif 'gmail' in query:
         speak("Opening Sir")
